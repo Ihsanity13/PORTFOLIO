@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Page title and description -->
+    <title>Ihsan Belches — BSIT Student & Developer</title>
+    <meta name="description" content="Portfolio of Ihsan Belches, BSIT student and aspiring web developer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
+        <a href="#home" class="nav__logo">Ihsan<span>.</span></a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"
+            aria-controls="navLinks"><span></span><span></span></button>
+        <nav id="navLinks" class="nav__links" aria-label="Main">
+            <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+            <a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- HOME -->
+        <section class="hero" id="home">
+
+            <div class="id">
+                <div class="id__swing">
+                    <span class="id__strap"></span>
+                    <button class="id__card" id="idCard" type="button" aria-label="Flip ID card"
+                        onclick="this.classList.toggle('is-flipped')">
+                        <span class="id__face id__front">
+                            <span class="id__clip"></span>
+                            <img src="assets/ihsan.jpg" alt="Photo of Ihsan Belches">
+                            <span class="id__name">Ihsan Belches</span>
+                            <span class="id__role">GOAT · MAJESTIC · SUPERB</span>
+                        </span>
+                        <span class="id__face id__back">
+                            <img src="assets/card-back.jpg" alt="Back of Ihsan's card">
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <p class="mono hero__meta">Portfolio<span id="year"></span></p>
+            <h1 class="hero__name">Hi, I'm<br><em>Ihsan.</em></h1>
+            <div class="hero__row">
+
+                <p class="hero__tag">Thug it out.</p>
+                <p class="hero__intro">BSIT student from Los Baños, Laguna. I build websites, apps and random projects
+                    that turn ideas into something real, and I'm still learning along the way.</p>
+            </div>
+            <p class="hero__now mono">Currently building: <span id="rotator">websites / mobile application</span></p>
+            <div class="hero__cta">
+                <a href="#projects" class="btn btn--solid magnetic">View Projects</a>
+                <a href="#contact" class="btn magnetic">Contact Me</a>
+            </div>
+            <p class="mono hero__status"><i></i> 3rd year BSIT / building and learning</p>
+        </section>
+
+        <div class="band" aria-hidden="true">
+            <div class="band__track">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>Python</span><span>Java</span><span>SQL</span><span>C</span><span>PostgreSQL</span><span>MySQL</span><span>Laravel</span><span>Spring
+                    Boot</span>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <header class="section__head reveal"><span class="mono">01</span>
+                <h2>About</h2>
+            </header>
+            <div class="about">
+                <div class="reveal">
+                    <p class="lead">I enjoy building websites, applications and random projects that turn ideas into
+                        something real and functional. I like experimenting with different technologies and figuring out
+                        how to make things work better.</p>
+                    <p class="about__more">I'm still learning along the way, but I'm focused on becoming a better
+                        programmer and creating things I can be proud of.</p>
+                </div>
+                <div class="reveal">
+                    <h3 class="mono label">Education</h3>
+                    <dl class="facts">
+                        <div>
+                            <dt>School</dt>
+                            <dd>Polytechnic University of the Philippines, Calauan Campus</dd>
+                        </div>
+                        <div>
+                            <dt>Program</dt>
+                            <dd>BS Information Technology</dd>
+                        </div>
+                        <div>
+                            <dt>Year level</dt>
+                            <dd>3rd year</dd>
+                        </div>
+                        <div>
+                            <dt>2022–2024</dt>
+                            <dd>Los Baños Senior High School (STEM)</dd>
+                        </div>
+                        <div>
+                            <dt>2018–2022</dt>
+                            <dd>Los Baños National High School</dd>
+                        </div>
+                        <div>
+                            <dt>2016–2018</dt>
+                            <dd>South Hill School Incorporated</dd>
+                        </div>
+                        <div>
+                            <dt>2012–2016</dt>
+                            <dd>Maquiling School Incorporated</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <ul class="stats reveal" aria-label="At a glance">
+                <li><b data-count="auto-projects">10</b><span class="mono">Projects</span></li>
+                <li><b data-count="auto-tech">37</b><span class="mono">Technologies</span></li>
+                <li><b data-count="9">9</b><span class="mono">Honor terms</span></li>
+            </ul>
+            <h3 class="mono label reveal">How I work</h3>
+            <ol class="qualities reveal">
+                <li><b>Time management</b></li>
+                <li><b>Adaptability</b></li>
+                <li><b>Self-motivation</b></li>
+                <li><b>Attention to detail</b></li>
+                <li><b>Critical thinking</b></li>
+                <li><b>Problem solving</b></li>
+                <li><b>Willingness to learn</b></li>
+                <li><b>Teamwork</b></li>
+            </ol>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <header class="section__head reveal"><span class="mono">02</span>
+                <h2>Skills</h2>
+            </header>
+            <p class="note mono reveal">Comfortable using all of these, and still learning.</p>
+            <div class="skills">
+                <div class="skills__group reveal">
+                    <h3>Languages</h3>
+                    <ul class="tags">
+                        <li data-level="3">HTML</li>
+                        <li data-level="3">CSS</li>
+                        <li data-level="3">JavaScript</li>
+                        <li data-level="3">PHP</li>
+                        <li data-level="3">Python</li>
+                        <li data-level="3">Java</li>
+                        <li data-level="3">C</li>
+                        <li data-level="3">C#</li>
+                        <li data-level="3">SQL</li>
+                        <li data-level="3">PL/pgSQL</li>
+                        <li data-level="3">COBOL</li>
+                    </ul>
+                </div>
+                <div class="skills__group reveal">
+                    <h3>Frameworks &amp; Networking</h3>
+                    <ul class="tags">
+                        <li data-level="3">Spring Boot</li>
+                        <li data-level="3">Laravel</li>
+                        <li data-level="3">Cisco</li>
+                    </ul>
+                </div>
+                <div class="skills__group reveal">
+                    <h3>Microsoft Office</h3>
+                    <ul class="tags">
+                        <li data-level="3">Microsoft Word</li>
+                        <li data-level="3">Microsoft Excel</li>
+                        <li data-level="3">Microsoft PowerPoint</li>
+                        <li data-level="3">Microsoft Access</li>
+                    </ul>
+                </div>
+                <div class="skills__group reveal">
+                    <h3>Design &amp; Content</h3>
+                    <ul class="tags">
+                        <li data-level="3">Figma</li>
+                        <li data-level="3">Canva</li>
+                        <li data-level="3">CapCut</li>
+                    </ul>
+                </div>
+                <div class="skills__group reveal">
+                    <h3>Development</h3>
+                    <ul class="tags">
+                        <li data-level="3">Visual Studio Code</li>
+                        <li data-level="3">Git</li>
+                        <li data-level="3">GitHub</li>
+                        <li data-level="3">GitHub Pages</li>
+                        <li data-level="3">Postman</li>
+                    </ul>
+                </div>
+                <div class="skills__group reveal">
+                    <h3>Database</h3>
+                    <ul class="tags">
+                        <li data-level="3">PostgreSQL</li>
+                        <li data-level="3">MySQL</li>
+                        <li data-level="3">pgAdmin 4</li>
+                        <li data-level="3">PostgreSQL / SQL Shell (psql)</li>
+                        <li data-level="3">MySQL Workbench</li>
+                        <li data-level="3">dbdiagram.io</li>
+                    </ul>
+                </div>
+                <div class="skills__group reveal">
+                    <h3>Other</h3>
+                    <ul class="tags">
+                        <li data-level="3">Google Docs</li>
+                        <li data-level="3">Google Sheets</li>
+                        <li data-level="3">Google Forms</li>
+                        <li data-level="3">Google Drive</li>
+                        <li data-level="3">Discord</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- FEATURED PROJECT -->
+        <section class="section" id="featured">
+            <header class="section__head reveal"><span class="mono">03</span>
+                <h2>Featured project</h2>
+            </header>
+            <article class="feature reveal">
+                <div class="ph feature__img" role="img" aria-label="Pokémon Pokédex screenshot placeholder">
+                    <div class="ph"><img src="assets/pokedex.png"
+                            alt="Pokémon Pokédex home screen showing a grid of Pokémon cards"></div>
+                    <p class="mono">Pokédex home screen</p>
+                </div>
+                <div class="feature__body">
+                    <p class="mono">Featured / Web / Software / 2026</p>
+                    <h3>Pokémon Pokédex</h3>
+                    <p>A web-based Pokédex that displays Pokémon information, with filtering and sorting features.</p>
+                    <ul class="chips">
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>MySQL</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PokeAPI</li>
+                    </ul>
+                    <dl class="facts">
+                        <div>
+                            <dt>What it shows</dt>
+                            <dd>Stats, types, abilities, descriptions and images for each Pokémon.</dd>
+                        </div>
+                        <div>
+                            <dt>My role</dt>
+                            <dd>Developer</dd>
+                        </div>
+                        <div>
+                            <dt>Status</dt>
+                            <dd>Completed</dd>
+                        </div>
+                    </dl>
+                    <div class="hero__cta"><a class="btn btn--solid" href="https://github.com/Ihsanity13"
+                            target="_blank" rel="noopener">GitHub</a></div>
+                </div>
+            </article>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <header class="section__head reveal"><span class="mono">04</span>
+                <h2>Projects</h2>
+            </header>
+            <div class="filters reveal" role="group" aria-label="Filter projects">
+                <button class="is-active" data-filter="all">All</button><button data-filter="web">Web</button>
+                <button data-filter="software">Software</button><button data-filter="database">Database</button>
+                <button data-filter="school">School</button><button data-filter="other">Other</button>
+            </div>
+            <p class="mono filters__count" id="filterCount" aria-live="polite"></p>
+            <ol class="projects">
+                <!-- To add a project: copy one <li class="project"> block. data-category can be web, software, database, school, other. -->
+                <li class="project reveal" data-category="software other">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">CalaJuan</span>
+                        <span class="mono project__cat">Software · Mobile · Research / 2026</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img" aria-label="CalaJuan screenshot placeholder"><span
+                                    class="mono">Image placeholder</span></div>
+                            <div>
+                                <p>A mobile tourism guide designed to help visitors discover tourist spots, cafés,
+                                    routes, travel times, weather and traffic information in Calauan.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Developer / Researcher</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>To be finalized</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>In progress</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="project reveal" data-category="web software">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">Pokémon Pokédex</span>
+                        <span class="mono project__cat">Web · Software / 2026</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img" aria-label="Pokémon Pokédex screenshot placeholder"><span
+                                    class="mono">Image placeholder</span></div>
+                            <div>
+                                <p>A web-based Pokédex that displays Pokémon information, including stats, types,
+                                    abilities, descriptions and images, with filtering and sorting features.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Developer</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>Java, Spring Boot, MySQL, JavaScript, HTML, CSS, PokeAPI</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>Completed</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="project reveal" data-category="web school">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">BloodLink</span>
+                        <span class="mono project__cat">Web · School / 2026</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img" aria-label="BloodLink screenshot placeholder"><span
+                                    class="mono">Image placeholder</span></div>
+                            <div>
+                                <p>A responsive blood donation website designed to provide information and connect users
+                                    with blood donation-related services.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Developer</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>HTML, CSS, JavaScript</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>Completed</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="project reveal" data-category="software school">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">Jack 'n Poy Game</span>
+                        <span class="mono project__cat">Software · School / 2025</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img" aria-label="Jack 'n Poy Game screenshot placeholder"><span
+                                    class="mono">Image placeholder</span></div>
+                            <div>
+                                <p>A console-based Rock-Paper-Scissors game where the player competes against the
+                                    computer using basic game logic, random choices and score tracking.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Developer</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>C</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>Completed</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="project reveal" data-category="web database school">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">Laravel Product Management System</span>
+                        <span class="mono project__cat">Web · Database · School / 2026</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img"
+                                aria-label="Laravel Product Management System screenshot placeholder"><span
+                                    class="mono">Image placeholder</span></div>
+                            <div>
+                                <p>A web-based product management system for storing and managing product data using
+                                    Laravel and PostgreSQL.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Developer</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>Laravel, PHP, PostgreSQL</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>Completed</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="project reveal" data-category="database school">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">Online Store Database System</span>
+                        <span class="mono project__cat">Database · School / 2026</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img" aria-label="Online Store Database System screenshot placeholder">
+                                <span class="mono">Image placeholder</span>
+                            </div>
+                            <div>
+                                <p>A relational database system for an online store, including an ERD, entity
+                                    relationships, primary and foreign keys, and database normalization.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Database Designer / Developer</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>PostgreSQL, SQL, dbdiagram.io</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>Completed</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="project reveal" data-category="database school">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">Student Enrollment Database</span>
+                        <span class="mono project__cat">Database · School / 2026</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img" aria-label="Student Enrollment Database screenshot placeholder">
+                                <span class="mono">Image placeholder</span>
+                            </div>
+                            <div>
+                                <p>A relational database for managing students, subjects and enrollments using
+                                    relationships, constraints, primary keys and foreign keys.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Database Developer</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>PostgreSQL, SQL</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>Completed</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="project reveal" data-category="database school">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">DBA Transactions, Functions &amp; Triggers</span>
+                        <span class="mono project__cat">Database · School / 2026</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img"
+                                aria-label="DBA Transactions, Functions &amp; Triggers screenshot placeholder"><span
+                                    class="mono">Image placeholder</span></div>
+                            <div>
+                                <p>A PostgreSQL activity focused on transactions, user-defined functions and triggers
+                                    for automating database operations and maintaining data integrity.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Database Developer</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>PostgreSQL, SQL, PL/pgSQL</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>Completed</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="project reveal" data-category="database school">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">Indexed, View-Based &amp; Optimized Queries</span>
+                        <span class="mono project__cat">Database · School / 2026</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img"
+                                aria-label="Indexed, View-Based &amp; Optimized Queries screenshot placeholder"><span
+                                    class="mono">Image placeholder</span></div>
+                            <div>
+                                <p>A PostgreSQL activity focused on improving query performance using indexes, views,
+                                    materialized views and EXPLAIN ANALYZE.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Database Developer</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>PostgreSQL, SQL</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>Completed</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="project reveal" data-category="web school">
+                    <button class="project__head" aria-expanded="false">
+                        <span class="mono project__no"></span>
+                        <span class="project__title">PHP Form &amp; Session System</span>
+                        <span class="mono project__cat">Web · School / 2026</span>
+                        <span class="project__plus" aria-hidden="true">+</span>
+                    </button>
+                    <div class="project__panel">
+                        <div class="project__inner">
+                            <div class="ph" role="img"
+                                aria-label="PHP Form &amp; Session System screenshot placeholder"><span
+                                    class="mono">Image placeholder</span></div>
+                            <div>
+                                <p>A simple multi-page PHP system demonstrating form handling, POST requests,
+                                    validation, arrays, loops and session management.</p>
+                                <dl class="facts">
+                                    <div>
+                                        <dt>Role</dt>
+                                        <dd>Developer</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Tech</dt>
+                                        <dd>HTML, PHP, CSS</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Status</dt>
+                                        <dd>Completed</dd>
+                                    </div>
+                                </dl>
+                                <p class="links"><a href="https://github.com/Ihsanity13" target="_blank"
+                                        rel="noopener">GitHub ↗</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <p class="empty mono" id="empty" hidden>No projects in this category yet.</p>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section class="section" id="achievements">
+            <header class="section__head reveal"><span class="mono">05</span>
+                <h2>Academic honors</h2>
+            </header>
+            <ol class="timeline">
+                <li class="reveal"><span class="mono">2025–26</span>
+                    <div>
+                        <h3>Dean's Lister</h3>
+                        <p>1st and 2nd Semester, A.Y. 2025–2026</p>
+                    </div>
+                </li>
+                <li class="reveal"><span class="mono">2024–25</span>
+                    <div>
+                        <h3>President's Lister</h3>
+                        <p>1st and 2nd Semester, A.Y. 2024–2025</p>
+                    </div>
+                </li>
+                <li class="reveal"><span class="mono">2023–24</span>
+                    <div>
+                        <h3>With Honors</h3>
+                        <p>Senior High School, A.Y. 2023–2024</p>
+                    </div>
+                </li>
+                <li class="reveal"><span class="mono">2022–23</span>
+                    <div>
+                        <h3>With Honors</h3>
+                        <p>Senior High School, A.Y. 2022–2023</p>
+                    </div>
+                </li>
+                <li class="reveal"><span class="mono">2021–22</span>
+                    <div>
+                        <h3>With High Honors</h3>
+                        <p>Junior High School, A.Y. 2021–2022</p>
+                    </div>
+                </li>
+                <li class="reveal"><span class="mono">2020–21</span>
+                    <div>
+                        <h3>With Honors</h3>
+                        <p>Junior High School, A.Y. 2020–2021</p>
+                    </div>
+                </li>
+                <li class="reveal"><span class="mono">2019–20</span>
+                    <div>
+                        <h3>With Honors</h3>
+                        <p>Junior High School, A.Y. 2019–2020</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <header class="section__head reveal"><span class="mono">06</span>
+                <h2>Contact</h2>
+            </header>
+            <p class="contact__big reveal">Got a project, an internship, or a question? <em>Say hi.</em></p>
+            <div class="contact__grid">
+                <ul class="contact__list reveal">
+                    <li><span class="mono">Email</span><a
+                            href="mailto:ihsanbelches@gmail.com">ihsanbelches@gmail.com</a></li>
+                    <li><span class="mono">GitHub</span><a href="https://github.com/Ihsanity13" target="_blank"
+                            rel="noopener">github.com/Ihsanity13</a></li>
+                    <li><span class="mono">Facebook</span>Ihsan Matthew M. Belches</li>
+                    <li><span class="mono">Location</span>Los Baños, Laguna, Philippines</li>
+                </ul>
+                <!-- Opens the visitor's email app (static site: nothing is sent automatically) -->
+                <form class="form reveal" id="contactForm" data-email="ihsanbelches@gmail.com">
+                    <label>Name<input name="name" required autocomplete="name"></label>
+                    <label>Email<input name="email" type="email" required autocomplete="email"></label>
+                    <label>Message<textarea name="message" rows="4" required></textarea></label>
+                    <button class="btn btn--solid" type="submit">Open in email app</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div><b>Ihsan Belches</b>
+            <p class="mono">Thug it out.</p>
+        </div>
+        <p class="footer__links"><a href="https://github.com/Ihsanity13" target="_blank" rel="noopener">GitHub</a><a
+                href="mailto:ihsanbelches@gmail.com">Email</a></p>
+        <p class="mono">© <span class="y"></span> Ihsan Belches</p>
+        <button class="totop" id="toTop" aria-label="Back to top">↑</button>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
