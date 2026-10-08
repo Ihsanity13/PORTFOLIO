@@ -1332,9 +1332,121 @@ body::after {
 }
 
 /* ===== Photo on the back of the card ===== */
-.id__back{padding:0;overflow:hidden;border-color:#555}
-.id__back img{display:block;width:100%;height:100%;object-fit:cover}
+.id__back {
+    padding: 0;
+    overflow: hidden;
+    border-color: #555
+}
+
+.id__back img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
 
 /* optional: trading-card proportions and slightly rounded corners */
-.id__card{aspect-ratio:5/7}
-.id__face{border-radius:.5rem}
+.id__card {
+    aspect-ratio: 5/7
+}
+
+.id__face {
+    border-radius: .5rem
+}
+
+/* Resume button: text with a line that draws in on hover */
+.btn--line {
+    position: relative;
+    border: 0;
+    padding: .85rem .2rem;
+    background: none;
+    color: var(--white)
+}
+
+.btn--line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: .55rem;
+    height: 1px;
+    background: var(--white);
+    transform: scaleX(.35);
+    transform-origin: left;
+    transition: transform .4s var(--ease)
+}
+
+.btn--line:hover {
+    background: none;
+    color: var(--white)
+}
+
+.btn--line:hover::after {
+    transform: scaleX(1)
+}
+
+/* ===== Opening sequence ===== */
+.intro {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: #0b0b0b;
+    place-items: center;
+    border-bottom: 1px solid var(--line)
+}
+
+.intro-on .intro {
+    display: grid
+}
+
+.intro-out .intro {
+    transform: translateY(-100%);
+    transition: transform .9s cubic-bezier(.76, 0, .24, 1)
+}
+
+.intro__inner {
+    display: grid;
+    gap: 1rem;
+    width: min(22rem, 72vw)
+}
+
+.intro__name {
+    font: italic 400 clamp(3.5rem, 12vw, 7rem)/1 var(--serif);
+    color: var(--white)
+}
+
+.intro__row {
+    display: flex;
+    justify-content: space-between
+}
+
+.intro__bar {
+    height: 1px;
+    background: var(--line)
+}
+
+.intro__bar i {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--white)
+}
+
+.intro-on:not(.intro-done) {
+    overflow: hidden
+}
+
+/* hold the hero name until the curtain lifts */
+.intro-on:not(.intro-done) .ch {
+    animation-play-state: paused
+}
+
+/* ID card waits above the screen, then drops in */
+.hero>.id {
+    transition: transform 1.3s cubic-bezier(.3, 1.35, .5, 1) .3s
+}
+
+.intro-on:not(.intro-done) .hero>.id {
+    transform: translateY(-130%)
+}

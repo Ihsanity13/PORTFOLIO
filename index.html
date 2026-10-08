@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Page title and description -->
     <title>Ihsan Belches — BSIT Student & Developer</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0b0b'/%3E%3Ctext x='26' y='47' font-family='Georgia,serif' font-style='italic' font-size='46' text-anchor='middle' fill='%23f4f4f2'%3EI%3C/text%3E%3Ccircle cx='46' cy='45' r='4' fill='%23f4f4f2'/%3E%3C/svg%3E">
     <meta name="description" content="Portfolio of Ihsan Belches, BSIT student and aspiring web developer.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +18,36 @@
 </head>
 
 <body>
+    <div class="intro" id="intro" aria-hidden="true">
+        <div class="intro__inner">
+            <span class="intro__name">Ihsan<span>.</span></span>
+            <span class="intro__row mono"><span>Loading portfolio</span><span id="introNum">000</span></span>
+            <span class="intro__bar"><i id="introBar"></i></span>
+        </div>
+    </div>
+    <script>
+        /* Opening sequence: counter, curtain lifts, then the ID card drops. Standalone: does not need js/script.js */
+        (function () {
+            var h = document.documentElement;
+            if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) { h.classList.add("intro-done"); return; }
+            h.classList.add("intro-on");
+            var box = document.getElementById("intro"), num = document.getElementById("introNum"), bar = document.getElementById("introBar");
+            var t0 = performance.now(), dur = 1400, finished = false;
+            function finish() {
+                if (finished) return; finished = true;
+                h.classList.add("intro-out");
+                setTimeout(function () { h.classList.add("intro-done"); }, 500);
+                setTimeout(function () { if (box.parentNode) box.parentNode.removeChild(box); }, 1500);
+            }
+            function tick(t) {
+                var p = Math.min((t - t0) / dur, 1), v = Math.round(p * 100);
+                num.textContent = ("00" + v).slice(-3); bar.style.width = v + "%";
+                if (p < 1) requestAnimationFrame(tick); else setTimeout(finish, 250);
+            }
+            requestAnimationFrame(tick);
+            setTimeout(finish, 4500); /* safety: never block the site */
+        })();
+    </script>
     <div class="progress" id="progress" aria-hidden="true"></div>
     <a class="skip" href="#main">Skip to content</a>
 
@@ -689,8 +721,9 @@
                             href="mailto:ihsanbelches@gmail.com">ihsanbelches@gmail.com</a></li>
                     <li><span class="mono">GitHub</span><a href="https://github.com/Ihsanity13" target="_blank"
                             rel="noopener">github.com/Ihsanity13</a></li>
-                    <li><span class="mono">Facebook</span>Ihsan Matthew M. Belches</li>
+                    <li><span class="mono">Facebook</span>Ihsan Matthew Belches</li>
                     <li><span class="mono">Location</span>Los Baños, Laguna, Philippines</li>
+                    <a href="assets/Ihsan-Belches-Resume.pdf" class="btn btn--line" download>Download Resume ↓</a>
                 </ul>
                 <!-- Opens the visitor's email app (static site: nothing is sent automatically) -->
                 <form class="form reveal" id="contactForm" data-email="ihsanbelches@gmail.com">
