@@ -619,21 +619,19 @@
                         </div>
                     </div>
                 </li>
-                <li class="project reveal" data-category="web school">
+                <li class="project reveal" data-category="software school">
                     <button class="project__head" aria-expanded="false">
                         <span class="mono project__no"></span>
-                        <span class="project__title">PHP Form &amp; Session System</span>
-                        <span class="mono project__cat">Web · School / 2026</span>
+                        <span class="project__title">FCFS CPU Scheduling</span>
+                        <span class="mono project__cat">Software · School / 2025</span>
                         <span class="project__plus" aria-hidden="true">+</span>
                     </button>
                     <div class="project__panel">
                         <div class="project__inner">
-                            <div class="ph" role="img"
-                                aria-label="PHP Form &amp; Session System screenshot placeholder"><span
+                            <div class="ph" role="img" aria-label="FCFS CPU Scheduling screenshot placeholder"><span
                                     class="mono">Image placeholder</span></div>
                             <div>
-                                <p>A simple multi-page PHP system demonstrating form handling, POST requests,
-                                    validation, arrays, loops and session management.</p>
+                                <p>A terminal-based First-Come, First-Served (FCFS) CPU scheduling simulation.</p>
                                 <dl class="facts">
                                     <div>
                                         <dt>Role</dt>
@@ -641,7 +639,7 @@
                                     </div>
                                     <div>
                                         <dt>Tech</dt>
-                                        <dd>HTML, PHP, CSS</dd>
+                                        <dd>C</dd>
                                     </div>
                                     <div>
                                         <dt>Status</dt>
@@ -743,9 +741,58 @@
         <p class="footer__links"><a href="https://github.com/Ihsanity13" target="_blank" rel="noopener">GitHub</a><a
                 href="mailto:ihsanbelches@gmail.com">Email</a></p>
         <p class="mono">© <span class="y"></span> Ihsan Belches</p>
-        <button class="totop" id="toTop" aria-label="Back to top">↑</button>
+        <button class="totop" id="toTop" aria-label="Back to top" onclick="window.scrollTo(0,0)">↑</button>
     </footer>
     <script src="js/script.js"></script>
+
+    <!-- Project filter (standalone, does not depend on js/script.js) -->
+    <script>
+        (function () {
+            function all(sel) { return [].slice.call(document.querySelectorAll(sel)); }
+            function match(p, f) { return f === "all" || (" " + (p.getAttribute("data-category") || "") + " ").indexOf(" " + f + " ") > -1; }
+            function apply(f) {
+                var items = all(".project"), shown = 0;
+                items.forEach(function (p) {
+                    var show = match(p, f);
+                    p.hidden = !show;
+                    if (!show) return;
+                    p.classList.add("is-in");
+                    p.style.transitionDelay = "0ms";
+                    var head = p.querySelector(".project__head");
+                    if (head) head.setAttribute("aria-expanded", "false");
+                    p.style.setProperty("--i", shown++);
+                    p.classList.remove("pop"); void p.offsetWidth; p.classList.add("pop");
+                });
+                var info = document.getElementById("filterCount"), empty = document.getElementById("empty");
+                if (info) info.textContent = "Showing " + shown + " of " + items.length;
+                if (empty) empty.hidden = shown > 0;
+            }
+            function setup() {
+                var items = all(".project");
+                all(".filters button[data-filter]").forEach(function (b) {
+                    if (b.querySelector("sup")) return;
+                    var f = b.getAttribute("data-filter");
+                    b.insertAdjacentHTML("beforeend", "<sup>" + items.filter(function (p) { return match(p, f); }).length + "</sup>");
+                });
+                apply("all");
+            }
+            /* one click listener on the whole page, so it works no matter when the buttons appear */
+            document.addEventListener("click", function (e) {
+                var btn = e.target.closest ? e.target.closest(".filters button[data-filter]") : null;
+                if (!btn) return;
+                all(".filters button[data-filter]").forEach(function (b) {
+                    b.classList.toggle("is-active", b === btn); b.setAttribute("aria-pressed", b === btn);
+                });
+                apply(btn.getAttribute("data-filter"));
+                var list = document.querySelector(".projects");
+                if (list) {
+                    var top = list.getBoundingClientRect().top;
+                    if (top > window.innerHeight * 0.7) window.scrollBy({ top: top - window.innerHeight * 0.45, behavior: "smooth" });
+                }
+            });
+            if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setup); else setup();
+        })();
+    </script>
 </body>
 
 </html>
